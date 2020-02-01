@@ -10,6 +10,10 @@ numpy = "*"
 pandas = "*"
 scikit-learn = "*"
 shapely = "*"
+gunicorn = "*"
+flask = "*"
+python-decouple = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.6"
