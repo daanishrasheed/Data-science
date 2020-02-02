@@ -14,6 +14,7 @@ gunicorn = "*"
 flask = "*"
 python-decouple = "*"
 python-dotenv = "*"
+category-encoders = "*"
 
 [requires]
 python_version = "3.6"

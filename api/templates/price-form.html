@@ -1,0 +1,39 @@
+<html>
+    <header>
+        <title>
+            Estimate Price
+        </title>
+    </header>
+    <body>
+        <h3>Estimate Price</h3>
+        <form action="/estimate-price" method="POST">
+            <p>
+                Neighborhood:
+                <input type="text" name="neighborhood" />
+            </p>
+            <p>
+                Total Number of Listings of the owner:
+                <input  type="number" name="listings_count" />
+            </p>
+            <p>
+                Number of Reviews on the listing:
+                <input type="number" name="num_reviews" />
+            </p>
+            <p>
+                Minimum Nights
+                <input type="number" name="min_nights" />
+            </p>
+            <p>
+                Number of days per year available:
+                <input type="number" name="availability" />
+            </p>
+            <p>
+                Last Review Time (TODO)
+                <input type="number" name="last_review_time" />
+            </p>
+            <p>
+                <input type="submit" />
+            </p>
+        </form>
+    </body>
+</html>
