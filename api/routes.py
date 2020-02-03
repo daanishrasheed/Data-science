@@ -41,7 +41,7 @@ def lookup_neighborhood_form():
 @APP.route("/estimate-price", methods=["POST"])
 def estimate_price():
    neighborhood = request.form["neighborhood"] 
-   room_type = request.form["neighborhood"] 
+   room_type = request.form["room_type"] 
    listings_count = int(request.form["listings_count"])
    num_reviews = int(request.form["num_reviews"])
    min_nights = int(request.form["min_nights"])

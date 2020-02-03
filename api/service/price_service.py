@@ -1,12 +1,36 @@
 #!/usr/bin/env python3
 
+from io import BytesIO
+import tarfile
 import pickle
 import numpy as np
 import pandas as pd
 
-_model = None
-with open("pickles/primitive_model.pickle", "rb") as f:
-    _model = pickle.load(f)
+
+def __loadModel():
+    """
+        Loads the model.
+    """
+    part_files = [
+        "pickles/" + f for f in ["xaa", "xab", "xac", "xad", "xae"]
+    ]
+    with open("model.tar.gz", "wb") as out:
+        for p in part_files:
+            with open(p, "rb") as pf:
+                out.write(pf.read())
+
+    t = tarfile.open("model.tar.gz", "r:gz")
+    t.extractall()
+    t.close()
+
+    with open("pickles/primitive_model.pickle", "rb") as mf:
+        model = pickle.load(mf)
+
+    return model
+
+
+_model = __loadModel()
+
 
 def estimate(
        neighborhood="",

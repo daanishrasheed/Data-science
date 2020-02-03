@@ -15,6 +15,7 @@ flask = "*"
 python-decouple = "*"
 python-dotenv = "*"
 category-encoders = "*"
+xgboost = "*"
 
 [requires]
 python_version = "3.6"
