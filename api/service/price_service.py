@@ -12,15 +12,7 @@ def __loadModel():
     """
         Loads the model.
     """
-    part_files = [
-        "pickles/" + f for f in ["xaa", "xab", "xac", "xad", "xae"]
-    ]
-    with open("model.tar.gz", "wb") as out:
-        for p in part_files:
-            with open(p, "rb") as pf:
-                out.write(pf.read())
-
-    t = tarfile.open("model.tar.gz", "r:gz")
+    t = tarfile.open("pickles/pickles.tar.gz", "r:gz")
     t.extractall()
     t.close()
 
