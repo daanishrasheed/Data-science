@@ -13,10 +13,7 @@ def __loadModel():
         Loads the model.
     """
     t = tarfile.open("pickles/pickles.tar.gz", "r:gz")
-    t.extractall()
-    t.close()
-
-    with open("pickles/primitive_model.pickle", "rb") as mf:
+    with t.extractfile("pickles/primitive_model.pickle") as mf:
         model = pickle.load(mf)
 
     return model
