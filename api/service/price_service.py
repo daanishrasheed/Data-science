@@ -5,6 +5,7 @@ import tarfile
 import pickle
 import numpy as np
 import pandas as pd
+import urllib.request
 
 
 def __loadModel():

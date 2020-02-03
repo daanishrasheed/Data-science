@@ -59,7 +59,7 @@ def estimate_price():
     )
 
    return jsonify({
-       "price": price
+       "price": float(price)
     })
 
 @APP.route("/estimate-price-form")
